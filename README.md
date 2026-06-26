@@ -6,9 +6,12 @@
 
 <img src="assets/banner.svg" alt="Banner" width="100%" />
 
+
+
+# 🚀 Awesome-Activation-Checkpointing  🧠
+
 </div>
 
-🚀 # Awesome-Activation-Checkpointing 🧠
 ## Activation Checkpointing: Evolution, Variants, Types, & Applications
 
 Activation Checkpointing—also known as Gradient Checkpointing or Rematerialization—is a crucial hardware-aware memory optimization framework for training deep neural networks. In standard backpropagation, a GPU must store all layer activations generated during the forward pass in its fast Video RAM (VRAM) so they can be referenced later to compute gradients during the backward pass. This creates an $O(N)$ memory bottleneck that scales linearly with network depth and context length, frequently triggering Out-Of-Memory (OOM) errors. Activation Checkpointing breaks this bottleneck by discarding most intermediate activations after they are calculated and dynamically recomputing (rematerializing) them on-the-fly during the backward pass, trading extra compute cycles for massive VRAM savings.
