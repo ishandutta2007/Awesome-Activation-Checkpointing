@@ -10,9 +10,12 @@ Activation Checkpointing—also known as Gradient Checkpointing or Rematerializa
 The technical implementation of activation optimization has transitioned from static, hand-configured layer boundaries to automated compiler scheduling and cross-device heterogeneous hardware offloading.
 
 
-[Manual Layer Selection (2016)] ----> [Automated Search (O1-Memory)] ----> [Selective & Fused Rematerialization (2023+)](Rigid Subgraph Segmenting)          (Graph-Based Linear Solvers)           (Operator-Aware Micro-Kernel Tiling)
-
-
+```mermaid
+flowchart LR
+    A["Manual Layer Selection (2016)<br/>(Rigid Subgraph Segmenting)"]
+    --> B["Automated Search (O1-Memory)<br/>(Graph-Based Linear Solvers)"]
+    --> C["Selective & Fused Rematerialization (2023+)<br/>(Operator-Aware Micro-Kernel Tiling)"]
+```
 
 
 *   **The Heuristic Manual Selection Era (Chen et al., 2016)**
